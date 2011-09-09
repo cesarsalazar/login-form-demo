@@ -1,0 +1,24 @@
+- content_for :head do
+  %link{:rel => 'stylesheet', :href => '/stylesheets/index.css', :type => 'text/css'}
+  %script{:src => '/javascripts/index.js', :type => 'text/javascript'}
+  %link{ :href => 'http://fonts.googleapis.com/css?family=Metrophobic', :rel => 'stylesheet', :type => 'text/css'}
+  %link{ :href => 'http://fonts.googleapis.com/css?family=Leckerli+One', :rel => 'stylesheet', :type => 'text/css'}
+
+%h1#logo Happiness
+
+#content
+  %h1 Welcome to DemoApp
+  %form
+    #email_address
+      %label Email Address
+      %input#user{:type => 'text', :name => 'email'}
+      / %p.notice Please provide a valid email address
+    #password
+      %label Password
+      %input#password{:type => 'password', :name => 'password'}
+    #submit
+      %input{:type => 'submit', :value => 'Login'}
+    #alternatives
+      %p
+        %span Did you forget your password?
+        %a{:href => '/forgot'} Change it here

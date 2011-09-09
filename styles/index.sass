@@ -1,0 +1,76 @@
+@import 'global'
+
+body
+  font-family: "Metrophobic", sans-serif
+  font-size: 12pt
+  background: #F2F2F2 url('/images/noise_pattern_with_crosslines.png') scroll repeat 0 0
+  
+h1
+  margin-bottom: 0.5em
+  
+a
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+
+h1#logo
+  @include centered
+  text-align: center
+  margin-top: 50px
+  font-family: "Leckerli One", cursive
+  font-size: 4em
+  color: #2D8CE0
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.25)
+  
+#content
+  @include centered(28em)
+  border: 1px solid #CCC
+  padding: 2em
+  overflow: hidden
+  @include round-corners
+  @include box-shadow
+  background: #FFF
+  
+  form > div
+    padding: 0.5em 0.35em
+    width: 100%
+    
+    &:last-child
+      margin-top: 1em
+    
+    &.invalid
+      background: rgba(255,0,0,0.1)
+      p.notice
+        color: rgba(255,0,0,1)
+        font-size: 0.8em
+        font-family: "Lucida Grande", sans-serif
+        margin: 0.5em 0
+        
+    input
+      font-family: "Metrophobic", sans-serif
+      font-size: 1.2em
+      &#user
+        background: #F5F5F5 url('/images/user_icon.png') scroll no-repeat 5px 50%
+        padding-left: 2.5em
+      &#password
+        background: #F5F5F5 url('/images/lock_icon.png') scroll no-repeat 10px 50%
+        padding-left: 2.5em
+    
+    input[type="text"], input[type="password"]
+      padding: 0.5em
+      width: 85%
+    
+    input[type="submit"]
+      border: 1px solid #CCC
+      background: #F2F2F2 url('/images/arrow_icon.png') scroll no-repeat 100% 50%
+      padding: 0.5em 2.5em 0.5em 1em
+      @include round-corners
+      
+      &:hover
+        background-color: #E2E2E2
+        cursor: pointer
+      &:active
+        background-color: #2D8CE0
+        cursor: pointer
+    
+    
